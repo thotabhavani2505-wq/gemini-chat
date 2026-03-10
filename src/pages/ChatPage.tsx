@@ -80,10 +80,22 @@ export default function ChatPage() {
           <div className="w-9 h-9 rounded-xl bg-primary flex items-center justify-center">
             <Sparkles className="w-5 h-5 text-primary-foreground" />
           </div>
-          <div>
+          <div className="flex-1">
             <h1 className="text-lg font-semibold text-foreground">Gemini Chat</h1>
             <p className="text-xs text-muted-foreground">Powered by AI</p>
           </div>
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={() => {
+              document.documentElement.classList.toggle("dark");
+            }}
+            className="rounded-xl"
+          >
+            <Sun className="w-5 h-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+            <Moon className="absolute w-5 h-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+            <span className="sr-only">Toggle theme</span>
+          </Button>
         </div>
       </header>
 
